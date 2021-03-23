@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% include 'cdnlines.html' %}
+</head>
+<style>
+.col-md-6{
+	border: 2px green solid;
+	margin-top: 150px;
+	padding:20px;
+}
+.btn{
+	float:right;
+}
+</style>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="offset-md-3 col-md-6">
+			<form action="{% url 'search_result' %}" method="get">
+				{{form.as_p}}
+      			<button type="submit" class="btn btn-info">Submit</button>
+    		</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
